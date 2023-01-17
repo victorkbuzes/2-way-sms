@@ -1,7 +1,7 @@
 // Define application constants
 const message = 'Premium SMS Code'
 // Your login credentials
-const shortCode = '32192'
+const shortCode = '2345'
 const username = 'sandbox'
 const apikey = '4fc63b75c4d39db96e4895fa652a74a8399a1777339d1a777e4d236908d3b6b5'
 const options = {
@@ -16,7 +16,7 @@ const sms = AfricasTalking.SMS
 
 exports.received = (req, res) => {
     var body = req.body;
-    if (body.to == '32192') {
+    if (body.to == '2345') {
         sendResponse(body.from, message)
         
     } else {
