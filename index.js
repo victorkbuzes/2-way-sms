@@ -6,8 +6,6 @@ var path = require('path');
 // const mongoose = require("mongoose");
 // const cors = require("cors");
 
-
-// const indexRouter = require('./routes/Index')
 const smsRoter = require('./routes/Sms')
 
 const app = express();

@@ -1,5 +1,5 @@
 // Define application constants
-const message = 'Premium SMS SHortCode'
+const message = 'Premium SMS Code'
 // Your login credentials
 const shortCode = '32192'
 const username = 'sandbox'
@@ -19,6 +19,8 @@ exports.received = (req, res) => {
     if (body.to == '32192') {
         sendResponse(body.from, message)
         
+    } else {
+        console.log('Something is wrong with the incoming message')
     }
 
 }
@@ -31,8 +33,8 @@ function sendResponse (recipient, message) {
     message: message
     }
     sms.send(opts).then(
-    console.log('Message sent successfully')
-    ).catch(
-    console.log('Something went wrong with message sending')
-    )
-    }
+        console.log('Message sent successfully')
+        ).catch(
+            console.log('Something went wrong with message sending')
+            )
+        }
