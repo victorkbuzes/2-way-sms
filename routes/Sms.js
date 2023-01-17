@@ -3,7 +3,7 @@ var router = express.Router();
 var sms = require('../controllers/smsController')
 
 router.post('/', sms.received)
-router.get("/welcome", function (req, res) {
+router.get("/hello", function (req, res) {
     res.send("Welcome")
     
 })
